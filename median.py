@@ -1,4 +1,5 @@
 import sys
+import math
 testcase, num_of_values, total_questions = list(map(int,input().split()))
 sys.stderr.write(str(testcase)+ str(num_of_values)+ str(total_questions)+'\n')
 
@@ -53,35 +54,70 @@ def solve_case(num_of_values):
     #    pass
     #else:
     #iterate solution
-    #print('answer: '+' '.join(str(item) for item in answer), file=sys.stderr)
+    print('answer: '+' '.join(str(item) for item in answer), file=sys.stderr)
 
     def switchero(solution, a_position):
-        #print(solution, file=sys.stderr)
+        print(solution, file=sys.stderr)
         b_position = len(solution)-a_position-1
         temp = solution[a_position]
         solution[a_position] = solution[b_position]
         solution[b_position] = temp
-        #print(solution, file=sys.stderr)
+        print(solution, file=sys.stderr)
         return solution
 
-    for index in range(len(answer)-2):
+    for index in range(0,int((len(answer)-2)/2)):
+        
         print(answer[index], answer[index+1], answer[index+2])
-        #print(answer[index], answer[index+1], answer[index+2], file=sys.stderr)
+        print(answer[index], answer[index+1], answer[index+2], file=sys.stderr)
 
         value = input()
-        #print('res: '+value, file=sys.stderr)
+        print('res: '+value, file=sys.stderr)
         if int(value) == answer[index+1]:
+            print('pass', file=sys.stderr)
             pass
         else:
-            #print('unoh!!!', file=sys.stderr)
+            print('unoh!!!', file=sys.stderr)
             answer = switchero(answer, index+1)
+        
 
-    #print(' '.join(str(item) for item in answer), file=sys.stderr)
+    '''
+    switch_set = set()
+
+    for index in range(0,int((len(answer)-2)/4)):
+
+        index_c = (int(len(answer)/2)-1)-index
+        index_b = math.ceil(index_c/2)
+        print('sparta ',index, index_b, index_c, file=sys.stderr)
+        print(answer[index], answer[index_b], answer[index_c], file=sys.stderr)
+
+        if(index < index_b <index_c):
+            print(answer[index], answer[index_b], answer[index_c])
+
+            value = input()
+            print('res: '+value, file=sys.stderr)
+            if int(value) == answer[index_b]:
+                print('pass', file=sys.stderr)
+                pass
+            else:
+                print('unoh!!!', file=sys.stderr)
+                if index_b in switch_set:
+                    print('switch '+str(index_c), file=sys.stderr)
+
+                    answer = switchero(answer, index_c)
+                    switch_set.add(index_c)
+                else:
+                    print('switch '+str(index_c), file=sys.stderr)
+
+                    answer = switchero(answer, index_c)
+                    switch_set.add(index_c)
+    '''
+
+    print(' '.join(str(item) for item in answer), file=sys.stderr)
     print(' '.join(str(item) for item in answer))
     value = input()
     print('judge says '+value, file=sys.stderr)
 
-for i in range(int(testcase)):
+for i in range(testcase):
     print('case '+str(i), file=sys.stderr)
     solve_case(num_of_values)
 

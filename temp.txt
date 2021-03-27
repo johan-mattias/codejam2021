@@ -1,0 +1,57 @@
+  sol: 1001030000
+  sol: case 0
+  sol: answer: 8 2 1 10 5 7 6 4 9 3
+  sol: 8 2 1
+  sol: res: 2
+  sol: pass
+  sol: 2 1 10
+  sol: res: 1
+  sol: pass
+  sol: 1 10 5
+  sol: res: 10
+  sol: pass
+  sol: 10 5 7
+  sol: res: 5
+  sol: pass
+  sol: 8 2 1 10 5 7 6 4 9 3
+  sol: judge says 1
+  sol: case 1
+  sol: answer: 4 2 5 7 8 3 10 9 1 6
+  sol: 4 2 5
+  sol: res: 5
+  sol: unoh!!!
+  sol: [4, 2, 5, 7, 8, 3, 10, 9, 1, 6]
+  sol: [4, 1, 5, 7, 8, 3, 10, 9, 2, 6]
+  sol: 1 5 7
+  sol: res: 7
+  sol: unoh!!!
+  sol: [4, 1, 5, 7, 8, 3, 10, 9, 2, 6]
+  sol: [4, 1, 9, 7, 8, 3, 10, 5, 2, 6]
+  sol: 9 7 8
+  sol: res: 7
+  sol: pass
+  sol: 7 8 3
+  sol: res: 8
+  sol: pass
+  sol: 4 1 9 7 8 3 10 5 2 6
+  sol: judge says 1
+  sol: case 2
+  sol: answer: 9 2 5 4 1 7 6 10 8 3
+  sol: 9 2 5
+  sol: res: 5
+  sol: unoh!!!
+  sol: [9, 2, 5, 4, 1, 7, 6, 10, 8, 3]
+  sol: [9, 8, 5, 4, 1, 7, 6, 10, 2, 3]
+  sol: 8 5 4
+  sol: res: 5
+  sol: pass
+  sol: 5 4 1
+  sol: res: 4
+  sol: pass
+  sol: 4 1 7
+  sol: res: 7
+  sol: unoh!!!
+  sol: [9, 8, 5, 4, 1, 7, 6, 10, 2, 3]
+  sol: [9, 8, 5, 4, 7, 1, 6, 10, 2, 3]
+  sol: 9 8 5 4 7 1 6 10 2 3
+  sol: judge says 1
